@@ -14,7 +14,10 @@
         "php": "^7.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "doctrine/annotations": "^1.0",
+        "doctrine/doctrine-bundle": "^2.3",
         "doctrine/doctrine-migrations-bundle": "^3.0",
+        "doctrine/orm": "^2.13",
         "ezsystems/doctrine-dbal-schema": "~1.0.2",
         "ezsystems/ez-support-tools": "~2.2.5",
         "ezsystems/ezplatform-admin-ui": "~2.2.7",
@@ -40,6 +43,7 @@
         "lexik/jwt-authentication-bundle": "^2.6",
         "monolog/monolog": "^2.0",
         "php-http/guzzle6-adapter": "^2.0",
+        "phpdocumentor/reflection-docblock": "^5.3",
         "platformsh/symfonyflex-bridge": "^2.2",
         "sensio/framework-extra-bundle": "^5.5",
         "symfony/asset": "^5.0",
@@ -51,11 +55,12 @@
         "symfony/form": "^5.0",
         "symfony/framework-bundle": "^5.0",
         "symfony/monolog-bundle": "^3.5",
-        "symfony/orm-pack": "^1.0",
         "symfony/process": "^5.0",
+        "symfony/property-access": "~5.1.0",
+        "symfony/property-info": "~5.1.0",
         "symfony/proxy-manager-bridge": "^5.0",
         "symfony/security-bundle": "^5.0",
-        "symfony/serializer-pack": "^1.0",
+        "symfony/serializer": "~5.1.0",
         "symfony/swiftmailer-bundle": "^3.4",
         "symfony/thanks": "^1.2",
         "symfony/translation": "^5.0",
@@ -78,15 +83,18 @@
         "ezsystems/allure-php-api": "~3.1.2",
         "ezsystems/behat-screenshot-image-driver-cloudinary": "~1.1.1",
         "ezsystems/behatbundle": "~8.2.4",
-        "liuggio/fastest": "^1.7",
         "friends-of-behat/mink-browserkit-driver": "^1.4",
         "friends-of-behat/mink-extension": "^2.4",
         "friends-of-behat/symfony-extension": "^2.1",
+        "liuggio/fastest": "^1.7",
         "overblog/graphiql-bundle": "^0.2",
         "phpunit/phpunit": "^8.2",
-        "symfony/debug-pack": "^1.0",
+        "symfony/browser-kit": "~5.1.0",
+        "symfony/css-selector": "~5.1.0",
+        "symfony/debug-bundle": "~5.1.0",
         "symfony/maker-bundle": "^1.14",
-        "symfony/test-pack": "^1.0"
+        "symfony/phpunit-bridge": "*",
+        "symfony/web-profiler-bundle": "~5.1.0"
     },
     "conflict": {
         "doctrine/persistence": "1.3.2",
@@ -135,7 +143,12 @@
             "ezsystems/*": "dist"
         },
         "sort-packages": true,
-        "bin-dir": "bin/"
+        "bin-dir": "bin/",
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "symfony/flex": true,
+            "symfony/thanks": true
+        }
     },
     "extra": {
         "symfony": {
